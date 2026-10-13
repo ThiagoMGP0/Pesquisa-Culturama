@@ -118,6 +118,7 @@
                 <input id="linkedin" type="checkbox" name="social" value="Linkedin">
                 <label for="linkedin">Linkedin</label>
                 <br>
+                <br>
 
                 <label for="musicStyle">Estilo musical:</label>
                 <input list="styles" id="musicStyle" type="text" name="userMusicStyle">
@@ -130,17 +131,43 @@
                     <option value="Forró">
                 </datalist>
                 <br>
+                <br>
 
                 <label for="favoriteColor">Cor favorita:</label>
                 <input id="favoriteColor" type="color" name="userFavoriteColor">
 
             </fieldset>
-            
+
+            <fieldset>
+                <!-- OPINIÃO -->
+
+                <legend>Satisfação</legend>
+                <p>Qual a sua satisfação com a Culturama?</p>
+                <input id="great" type="radio" name="userSatisfaction" value="satisfied">
+                <label for="great">Ótima</label>
+
+                <input id="good" type="radio" name="userSatisfaction" value="neutral">
+                <label for="good">Boa</label>
+
+                <input id="regular" type="radio" name="userSatisfaction" value="dissatisfied">
+                <label for="regular">Regular</label>
+
+                <input id="bad" type="radio" name="userSatisfaction" value="dissatisfied">
+                <label for="bad">Ruim</label>
+                <br>
+                <br>
+
+                <label for="opinion">Deixe sua opinião sobre a Culturama:</label>
+                <br>
+                <textarea id="opinion" name="userOpinion" rows="5" cols="30" placeholder="Digite aqui sua opinião..."></textarea>
+            </fieldset>
+
             <br>
 
             <button type="submit">Enviar</button>
         </form>
 
+    
 
 
     </section>
