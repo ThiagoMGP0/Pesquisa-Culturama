@@ -162,9 +162,23 @@
                 <textarea id="opinion" name="userOpinion" rows="5" cols="30" placeholder="Digite aqui sua opinião..."></textarea>
             </fieldset>
 
+            <fieldset>
+                <!-- CONFIRMAÇÃO -->
+                <legend>Confirmações</legend>
+                <input id="userLgpd" type="checkbox" name="userLgpdTerm" value="accepted" required>
+                <label for="userLgpd">Eu aceito participar da pesquisa.</label>
+                <br>
+                <input id="getResults" type="checkbox" name="userGetResults" value="accepted">
+                <label for="getResults">Eu aceito receber os resultados por email.</label>
+
+                
+            </fieldset>
+            
             <br>
 
             <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+
         </form>
 
     
