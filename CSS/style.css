@@ -85,11 +85,11 @@ input[type="color"] {
     padding: 0;
 }
 
-input:invalid, select:invalid, textarea:invalid {
+input:user-invalid, select:user-invalid, textarea:user-invalid {
     border-color: red;
 }
 
-input:valid, select:valid, textarea:valid {
+input:user-valid, select:user-valid, textarea:user-valid {
     border-color: green;
 }
 
@@ -112,4 +112,84 @@ button[type="reset"]:hover {
     color: white;
 }
 
+
+/* ORGANIZAÇÃO */
+.campo-input {
+    position: relative;
+}
+
+.campo-input input,
+.campo-input select {
+    padding-right: 35px;
+    margin-bottom: 0;
+}
+
+/* FOCO */
+.campo-input input:focus,
+.campo-input select:focus {
+    outline: 2px solid #80bfff;
+    outline-offset: 2px;
+}
+
+/* VALIDAÇÃO */
+.campo-input input:user-valid,
+.campo-input select:user-valid {
+    border-color: green;
+}
+
+.campo-input input:user-invalid,
+.campo-input select:user-invalid {
+    border-color: red;
+}
+
+/* ÍCONES */
+.campo-input span {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+.campo-input input:user-valid ~ .sucesso,
+.campo-input select:user-valid ~ .sucesso {
+    display: block;
+    color: green;
+}
+
+.campo-input input:user-invalid ~ .erro,
+.campo-input select:user-invalid ~ .erro {
+    display: block;
+    color: red;
+}
+
+/* MENSAGENS */
+.mensagem {
+    display: none;
+    font-size: 12px;
+}
+
+/* Mensagem de sucesso */
+.campo-input:has(input:user-valid) ~ .sucesso-msg,
+.campo-input:has(select:user-valid) ~ .sucesso-msg {
+    display: block;
+    color: green;
+}
+
+/* Mensagem de erro */
+.campo-input:has(input:user-invalid) ~ .erro-msg,
+.campo-input:has(select:user-invalid) ~ .erro-msg {
+    display: block;
+    color: red;
+}
+/* CHECKBOX */
+#userLgpd:invalid + label {
+    color: red;
+}
+
+#userLgpd:invalid ~ .erro-msg {
+    display: block;
+    color: red;
+}
 
