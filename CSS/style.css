@@ -112,92 +112,83 @@ button[type="reset"]:hover {
     color: white;
 }
 
-/* ORGANIZAÇÃO DOS CAMPOS */
 
-.campo {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 15px;
-}
-
+/* ORGANIZAÇÃO */
 .campo-input {
     position: relative;
 }
 
-/* INPUTS */
-
-.campo-input input {
-    width: 100%;
-    padding-right: 40px;
+.campo-input input,
+.campo-input select {
+    padding-right: 35px;
     margin-bottom: 0;
-    transition: 0.2s;
 }
 
-/* CAMPO EM FOCO */
-
-.campo-input input:focus {
-    outline: 3px solid #80bfff;
+/* FOCO */
+.campo-input input:focus,
+.campo-input select:focus {
+    outline: 2px solid #80bfff;
     outline-offset: 2px;
 }
 
-/* CAMPO VÁLIDO */
-
-.campo-input input:user-valid {
-    border: 2px solid green;
-    background-color: #f0fff0;
+/* VALIDAÇÃO */
+.campo-input input:user-valid,
+.campo-input select:user-valid {
+    border-color: green;
 }
 
-/* CAMPO INVÁLIDO */
-
-.campo-input input:user-invalid {
-    border: 2px solid red;
-    background-color: #fff0f0;
+.campo-input input:user-invalid,
+.campo-input select:user-invalid {
+    border-color: red;
 }
 
 /* ÍCONES */
-
-.icone {
+.campo-input span {
     display: none;
     position: absolute;
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
     font-weight: bold;
-    font-size: 18px;
 }
 
-/* ÍCONE DE SUCESSO */
-
-.campo-input input:user-valid ~ .sucesso {
-    display: inline;
+.campo-input input:user-valid ~ .sucesso,
+.campo-input select:user-valid ~ .sucesso {
+    display: block;
     color: green;
 }
 
-/* ÍCONE DE ERRO */
-
-.campo-input input:user-invalid ~ .erro {
-    display: inline;
+.campo-input input:user-invalid ~ .erro,
+.campo-input select:user-invalid ~ .erro {
+    display: block;
     color: red;
 }
 
 /* MENSAGENS */
-
 .mensagem {
     display: none;
     font-size: 12px;
 }
 
-/* MENSAGEM DE SUCESSO */
-
-.campo:has(input:user-valid) .sucesso-msg {
+/* Mensagem de sucesso */
+.campo-input:has(input:user-valid) ~ .sucesso-msg,
+.campo-input:has(select:user-valid) ~ .sucesso-msg {
     display: block;
     color: green;
 }
 
-/* MENSAGEM DE ERRO */
+/* Mensagem de erro */
+.campo-input:has(input:user-invalid) ~ .erro-msg,
+.campo-input:has(select:user-invalid) ~ .erro-msg {
+    display: block;
+    color: red;
+}
+/* CHECKBOX */
+#userLgpd:invalid + label {
+    color: red;
+}
 
-.campo:has(input:user-invalid) .erro-msg {
+#userLgpd:invalid ~ .erro-msg {
     display: block;
     color: red;
 }

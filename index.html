@@ -30,111 +30,56 @@
             <form action="sucesso.html" method="get">
 
                 <fieldset>
-                    <!-- DADOS PESSOAIS -->
+                   <!-- DADOS PESSOAIS -->
 
                 <legend>Dados Pessoais</legend>
-
-                    <!-- NOME -->
-
-                <div class="campo">
-                    <label for="name">Nome</label>
-
+                <!--- NOME --> 
+                <label for="name">Nome</label>       
                 <div class="campo-input">
-                    <input id="name" type="text" name="userName" required aria-describedby="msg-name">
-
-                    <span class="icone sucesso" aria-hidden="true">✓</span>
-                    <span class="icone erro" aria-hidden="true">!</span>
-                </div>
-                    <small id="msg-name" class="mensagem erro-msg">
-                            Informe seu nome...
-                    </small>
-
-                    <small class="mensagem sucesso-msg">
-                            Nome válido!
-                    </small>
+                    <input id="name" type="text" name="userName" required>
+                    <span class="sucesso">✓</span>
+                    <span class="erro">!</span>
                 </div>
 
-                    <!-- IDADE -->
+                <small class="mensagem erro-msg">Informe seu nome.</small>
+                <small class="mensagem sucesso-msg">Nome válido!</small>
+                <br>
 
-                <div class="campo">
-                    <label for="userAge">Idade</label>
-
+                <!--- IDADE -->
+                <label for="userAge">Idade</label>
                 <div class="campo-input">
-                    <input id="userAge" type="number" name="age" min="12" max="100" required aria-describedby="msg-age">
-
-                    <span class="icone sucesso" aria-hidden="true">✓</span>
-                    <span class="icone erro" aria-hidden="true">!</span>
+                    <input id="userAge" type="number" name="age" min="12" max="100" required>
+                    <span class="sucesso">✓</span>
+                    <span class="erro">!</span>
                 </div>
+                <small class="mensagem erro-msg">Informe uma idade entre 12 e 100 anos.</small>
+                <small class="mensagem sucesso-msg">Idade válida!</small>
+                <br>
 
-                    <small id="msg-age" class="mensagem erro-msg">
-                            Informe uma idade entre 12 e 100 anos...
-                    </small>
-
-                    <small class="mensagem sucesso-msg">
-                            Idade válida!
-                    </small>
-                </div>
-
-                    <!-- DATA DE NASCIMENTO -->
-
-                <div class="campo">
-                     <label for="birthDate">Data de nascimento</label>
-                    <input id="birthDate" type="date" name="birthDate">
-                 </div>
-
-                    <!-- EMAIL -->
-
-                <div class="campo">
-                    <label for="userEmail">Email</label>
-
+                <!--- DATA DE NASCIMENTO -->
+                <label for="birthDate">Data de nascimento</label>
+                <input id="birthDate" type="date" name="birthDate">
+                <br>
+                
+                <!--- EMAIL -->
+                <label for="userEmail">Email</label>
                 <div class="campo-input">
-                         <input id="userEmail" type="email" name="userEmail" placeholder="exemplo@email.com" required
-                                aria-describedby="msg-email">
-
-                    <span class="icone sucesso" aria-hidden="true">✓</span>
-                     <span class="icone erro" aria-hidden="true">!</span>
-                 </div>
-
-                     <small id="msg-email" class="mensagem erro-msg">
-                            Digite um endereço de email válido...
-                    </small>
-
-                    <small class="mensagem sucesso-msg">
-                            Email válido!
-                    </small>
+                    <input id="userEmail" type="email" name="userEmail" required>
+                    <span class="sucesso">✓</span>
+                    <span class="erro">!</span>
                 </div>
 
-                    <!-- TELEFONE -->
+                <small class="mensagem erro-msg">Digite um email válido.</small>
+                <small class="mensagem sucesso-msg">Email válido!</small>
+                <br>
 
-                <div class="campo">
-                    <label for="userPhoneNumber">Telefone</label>
-
-                    <div class="campo-input">
-                        <input id="userPhoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}"
-                                placeholder="DDD + número sem espaço ou hífen" aria-describedby="msg-phone">
-
-                    <span class="icone sucesso" aria-hidden="true">✓</span>
-                    <span class="icone erro" aria-hidden="true">!</span>
-                </div>
-
-                    <small id="msg-phone" class="mensagem erro-msg">
-                            Informe 11 números, incluindo o DDD...
-                    </small>
-
-                    <small class="mensagem sucesso-msg">
-                            Telefone válido!
-                    </small>
-                </div>
-
-                    <!-- FOTO -->
-
-                <div class="campo">
-                     <label for="userImage">Upload de foto</label>
-                     <input id="userImage" type="file" accept="image/*" name="userImage">
-                </div>
-
-                </fieldset>
-
+                <!--- TELEFONE -->
+                <label for="userPhoneNumber">Telefone</label>
+                <input id="userPhoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD + número sem espaço ou hifen">
+                <br>
+                <label for="userImage">Upload de foto</label>
+                <input id="userImage" type="file" accept="image/*" name="userImage">
+                </fieldset> 
 
                 <fieldset>
                     <!-- ESTADOS -->
@@ -163,41 +108,50 @@
 
 
                     <label for="state">Estado:</label>
+
+                    <div class="campo-input">
                     <select id="state" name="userState" required>
-                        <option value="acre"> Acre</option>
-                        <option value="alagoas"> Alagoas</option>
-                        <option value="amapa"> Amapá</option>
-                        <option value="amazonas"> Amazonas</option>
-                        <option value="bahia"> Bahia</option>
-                        <option value="ceara"> Ceará</option>
-                        <option value="distritoFederal"> Distrito Federal</option>
-                        <option value="espiritoSanto"> Espirito Santo</option>
-                        <option value="goias"> Goiás</option>
-                        <option value="maranhao"> Maranhão</option>
-                        <option value="matoGrossoDoSul"> Mato Grosso do Sul</option>
-                        <option value="matoGrosso"> Mato Grosso</option>
-                        <option value="minasGerais"> Minas Gerais</option>
-                        <option value="para"> Pará</option>
-                        <option value="paraiba"> Paraíba</option>
-                        <option value="parana"> Paraná</option>
-                        <option value="pernambuco"> Pernambuco</option>
-                        <option value="piaui"> Piauí</option>
-                        <option value="rioDeJaneiro"> Rio de Janeiro</option>
-                        <option value="rioGrandeDoNorte"> Rio Grande do Norte</option>
-                        <option value="rioGrandeDoSul"> Rio Grande do Sul</option>
-                        <option value="rondonia"> Rondônia</option>
-                        <option value="roraima"> Roraima</option>
-                        <option value="santaCatarina"> Santa Catarina</option>
-                        <option value="saoPaulo"> São Paulo</option>
-                        <option value="sergipe"> Sergipe</option>
-                        <option value="tocantins"> Tocantins</option>
+                        <option value="" selected disabled>Selecione...</option>
+                        <option value="acre">Acre</option>
+                        <option value="alagoas">Alagoas</option>
+                        <option value="amapa">Amapá</option>
+                        <option value="amazonas">Amazonas</option>
+                        <option value="bahia">Bahia</option>
+                        <option value="ceara">Ceará</option>
+                        <option value="distritoFederal">Distrito Federal</option>
+                        <option value="espiritoSanto">Espírito Santo</option>
+                        <option value="goias">Goiás</option>
+                        <option value="maranhao">Maranhão</option>
+                        <option value="matoGrossoDoSul">Mato Grosso do Sul</option>
+                        <option value="matoGrosso">Mato Grosso</option>
+                        <option value="minasGerais">Minas Gerais</option>
+                        <option value="para">Pará</option>
+                        <option value="paraiba">Paraíba</option>
+                        <option value="parana">Paraná</option>
+                        <option value="pernambuco">Pernambuco</option>
+                        <option value="piaui">Piauí</option>
+                        <option value="rioDeJaneiro">Rio de Janeiro</option>
+                        <option value="rioGrandeDoNorte">Rio Grande do Norte</option>
+                        <option value="rioGrandeDoSul">Rio Grande do Sul</option>
+                        <option value="rondonia">Rondônia</option>
+                        <option value="roraima">Roraima</option>
+                        <option value="santaCatarina">Santa Catarina</option>
+                        <option value="saoPaulo">São Paulo</option>
+                        <option value="sergipe">Sergipe</option>
+                        <option value="tocantins">Tocantins</option>
                     </select>
+
+                        <span class="sucesso">✓</span>
+                        <span class="erro">!</span>
+                    </div>
+
+                    <small class="mensagem erro-msg">Selecione seu estado.</small>
+                    <small class="mensagem sucesso-msg">Estado selecionado!</small>
 
                     <label for="city">Cidade</label>
                     <input id="city" type="text" name="userCity">
 
                 </fieldset>
-
 
                 <fieldset>
                     <!--REDES SOCIAIS-->
@@ -266,6 +220,10 @@
                     <legend>Confirmações</legend>
                     <input id="userLgpd" type="checkbox" name="userLgpdTerm" value="accepted" required>
                     <label for="userLgpd">Eu aceito participar da pesquisa.</label>
+
+                    <small class="mensagem erro-msg">
+                        Você precisa aceitar participar da pesquisa.
+                    </small>
                     <br>
                     <input id="getResults" type="checkbox" name="userGetResults" value="accepted">
                     <label for="getResults">Eu aceito receber os resultados por email.</label>
